@@ -56,8 +56,14 @@ function choisir(a){
 
 function miser(){
   mise=+prompt('Entrez votre mise');
-  document.getElementById("p2").innerHTML = `mise : ${mise}$`;
-  document.getElementById("p3").innerHTML = `solde : ${solde}$`;
+  if (mise>=solde){
+    mise=-1;
+    alert("Pas assez d'argent disponible");
+  }
+  else {
+    document.getElementById("p2").innerHTML = `mise : ${mise}$`;
+    document.getElementById("p3").innerHTML = `solde : ${solde}$`;
+  }
 }
 
 function verifier(a){
@@ -157,6 +163,9 @@ function demarrer(){
   if (choix==-1 || mise==-1 || mise==0) {
     document.getElementById("p4").innerHTML =`Choisisez d'abord une mise`;
   }
+  else if (solde<=0) {
+    alert("BANQUEROUTE");
+  }
   else {
     solde-=mise;
     genererNombre();
@@ -177,6 +186,6 @@ function demarrer(){
     else {
       document.getElementById("p4").innerHTML =`La bille s'est arrêté sur ${rNbr}, VOUS AVEZ PERDU`;
     }
-    document.getElementById("p3").innerHTML = `solde : ${solde}`;
+    document.getElementById("p3").innerHTML = `solde : ${solde}$`;
   }
 }
