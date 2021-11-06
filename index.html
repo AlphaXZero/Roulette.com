@@ -7,17 +7,21 @@
   </head>
   <body>
     <img src="Roul.JPG" alt="image des différentes couleurs des nombres "style="height:148px;"></img><br><br>
-    <input type="button" value="      1 - 12      " onclick="miser(1)"/>
-    <input type="button" value="      2 - 12      " onclick="miser(2)"/>
-    <input type="button" value="      3 - 12      " onclick="miser(3)"/><br></br>
-    <input type="button" value="1-18" onclick="miser(4)"/>
-    <input type="button" value="pair" onclick="miser(5)"/>
-    <input type="button" value="rouge" onclick="miser(6)"/>
-    <input type="button" value="noir" onclick="miser(7)"/>
-    <input type="button" value="impair" onclick="miser(8)"/>
-    <input type="button" value="19-36" onclick="miser(9)"/><br></br>
-    <input type="button" value="                     miser sur un nombre                     " onclick="miser(10)"/><br><br>
-    <p id="p1">choix : </p>
+    <input type="button" value="      1 - 12      " onclick="choisir(1);"/>
+    <input type="button" value="      2 - 12      " onclick="choisir(2);"/>
+    <input type="button" value="      3 - 12      " onclick="choisir(3);"/><br></br>
+    <input type="button" value="1-18" onclick="choisir(4);"/>
+    <input type="button" value="pair" onclick="choisir(5);"/>
+    <input type="button" value="rouge" onclick="choisir(6);"/>
+    <input type="button" value="noir" onclick="choisir(7);"/>
+    <input type="button" value="impair" onclick="choisir(8);"/>
+    <input type="button" value="19-36" onclick="choisir(9);"/><br></br>
+    <input type="button" value="                     miser sur un nombre                     " onclick="choisir(10);"/><br><br>
+    <p id="p1">choix : </p><hr>
+    <input type="button" value="miser" onclick="miser();"/>
+    <p id="p2">mise : </p>
+    <p id="p3">solde : <script>document.write(solde)</script></p><hr>
     <input type="button" value="LANCER LA ROUE" onclick="demarrer()"/>
+    <p id="p4">Résultat : </p>
   </body>
 </html>

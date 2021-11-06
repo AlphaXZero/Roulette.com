@@ -1,0 +1,25 @@
+function hw(){
+  console.log("Hello World");
+}
+
+function aire(){
+  let long=Number(prompt("entrez la longueur (m)"));
+  let lar=Number(prompt("entrez la largeur (m)"));
+  alert(`l'aire est de ${lar*long} m², ${long+lar}`);
+}
+
+function tva(){
+  let htv=prompt("entrez le prix hors TVA");
+  let vt=prompt("entrez la valeur de la TVA (en décimal 21% = 0.21)");
+  alert(`Le prix de l'article TVA comprise est de ${Number(htv) + Number(htv)*Number(vt)} euros`);
+}
+
+function permutation(){
+  let premier="Nadal";
+  let second="Federer";
+  console.log(`premier : ${premier}, second : ${second}`);
+  let oui=premier;
+  premier=second;
+  second=oui;
+  console.log(`premier : ${premier}, second : ${second}`);
+}
