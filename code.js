@@ -56,7 +56,7 @@ function choisir(a){
 
 function miser(){
   mise=+prompt('Entrez votre mise');
-  if (mise>=solde){
+  if (mise>solde){
     mise=-1;
     alert("Pas assez d'argent disponible");
   }
