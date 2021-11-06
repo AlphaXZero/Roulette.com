@@ -16,11 +16,11 @@ function choisir(a){
     choix=1;
   }
   if (a==2) {
-    document.getElementById("p1").innerHTML = "choix : 2 - 12";
+    document.getElementById("p1").innerHTML = "choix : 13 - 24";
     choix=2;
   }
   if (a==3) {
-    document.getElementById("p1").innerHTML = "choix : 3 - 12";
+    document.getElementById("p1").innerHTML = "choix : 25 - 36";
     choix=3;
   }
   if (a==4) {
