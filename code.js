@@ -2,7 +2,7 @@ let rNbr=-1;
 let choixNbr=-1;
 let resultat=-1;
 let choix=-1;
-let solde=500;
+let solde=100;
 let mise=-1;
 
 function genererNombre(){
@@ -56,8 +56,8 @@ function choisir(a){
 
 function miser(){
   mise=+prompt('Entrez votre mise');
-  document.getElementById("p2").innerHTML = `mise : ${mise}`;
-  document.getElementById("p3").innerHTML = `solde : ${solde}`;
+  document.getElementById("p2").innerHTML = `mise : ${mise}$`;
+  document.getElementById("p3").innerHTML = `solde : ${solde}$`;
 }
 
 function verifier(a){
@@ -153,30 +153,30 @@ function verifier(a){
 }
 
 function demarrer(){
-  solde-=mise;
   let coef=-1;
   if (choix==-1 || mise==-1 || mise==0) {
     document.getElementById("p4").innerHTML =`Choisisez d'abord une mise`;
   }
-  if (choix>=1 && choix<=3) {
-    coef=3;
-  }
-  if (choix>=4 && choix<=9){
-    coef=2;
-  }
-  if (choix==10){
-    coef=37;
-  }
   else {
+    solde-=mise;
     genererNombre();
     verifier(choix);
     if (resultat) {
+      if (choix>=1 && choix<=3) {
+        coef=3;
+      }
+      if (choix>=4 && choix<=9){
+        coef=2;
+      }
+      if (choix==10){
+        coef=37;
+      }
       document.getElementById("p4").innerHTML =`La bille s'est arrêté sur ${rNbr}, VOUS AVEZ GAGNE ${mise*coef-mise}$`;
       solde+=mise*coef;
     }
     else {
       document.getElementById("p4").innerHTML =`La bille s'est arrêté sur ${rNbr}, VOUS AVEZ PERDU`;
     }
+    document.getElementById("p3").innerHTML = `solde : ${solde}`;
   }
-  document.getElementById("p3").innerHTML = `solde : ${solde}`;
 }
