@@ -56,7 +56,7 @@ function choisir(a){
 
 function miser(){
   mise=+prompt('Entrez votre mise');
-  if (mise<solde && mise>0 && isNaN(mise)==false){
+  if (mise<=solde && mise>0 && isNaN(mise)==false){
     document.getElementById("p2").innerHTML = `mise : ${mise}$`;
     document.getElementById("p3").innerHTML = `solde : ${solde}$`;
 
